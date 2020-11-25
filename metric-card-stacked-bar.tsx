@@ -14,7 +14,7 @@ const defaultProps = {
   color: "#5b8ff9",
 }
 
-const MetricCardStackedBarChart: React.FC<MetricCardComponentProps> = ({
+const MetricCardStackedBar: React.FC<MetricCardComponentProps> = ({
   color,
   className,
   data,
@@ -53,6 +53,6 @@ const MetricCardStackedBarChart: React.FC<MetricCardComponentProps> = ({
   )
 }
 
-const MemoCardContent = React.memo(MetricCardStackedBarChart)
+const MemoCardContent = React.memo(MetricCardStackedBar)
 
 export default withDefaults(MemoCardContent, defaultMetricCardProps)
