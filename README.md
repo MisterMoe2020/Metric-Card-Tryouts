@@ -15,3 +15,5 @@ MetricCard.StackedBar = StackedBar
 
 StackedBar: typeof StackedBar
 
+3. Not sure: Change the file https://github.com/MisterMoe2020/Metric-Card-Tryouts/blob/main/metric-card-stacked-bar.tsx, so that it works in the new system without bizcharts?
+
