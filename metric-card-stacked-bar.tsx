@@ -1,18 +1,18 @@
-import React from "react";
-import useTheme from "@brudi/hui/esm/styles/use-theme";
-import withDefaults from "@brudi/hui/esm/utils/with-defaults";
+import React from 'react'
+import useTheme from '../styles/use-theme'
+import withDefaults from '../utils/with-defaults'
 import {
   defaultMetricCardProps,
-  MetricCardComponentProps,
-} from "@brudi/hui/esm/metric-card/metric-card-types";
-import { loadBizCharts } from "@brudi/hui/esm/metric-card/metric-card-utils";
+  MetricCardComponentProps
+} from '../metric-card/metric-card-types'
+import { loadBizCharts } from '../metric-card/metric-card-utils'
 
-import { Loading } from "@brudi/hui";
+import { Loading } from '@brudi/hui'
 
 const defaultProps = {
   ...defaultMetricCardProps,
   color: "#5b8ff9",
-};
+}
 
 const MetricCardStackedBarChart: React.FC<MetricCardComponentProps> = ({
   color,
@@ -20,7 +20,7 @@ const MetricCardStackedBarChart: React.FC<MetricCardComponentProps> = ({
   data,
   position,
 }) => {
-  const theme = useTheme();
+  const theme = useTheme()
 
   const chart = loadBizCharts(({ bizcharts }) => {
     return (
@@ -36,8 +36,8 @@ const MetricCardStackedBarChart: React.FC<MetricCardComponentProps> = ({
         />
         <bizcharts.Tooltip shared />
       </bizcharts.Chart>
-    );
-  }, Loading);
+    )
+  }, Loading)
 
   return (
     <div className={`bar-chart ${className}`}>
@@ -50,9 +50,9 @@ const MetricCardStackedBarChart: React.FC<MetricCardComponentProps> = ({
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-const MemoCardContent = React.memo(MetricCardStackedBarChart);
+const MemoCardContent = React.memo(MetricCardStackedBarChart)
 
-export default withDefaults(MemoCardContent, defaultMetricCardProps);
+export default withDefaults(MemoCardContent, defaultMetricCardProps)
